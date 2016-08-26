@@ -11,4 +11,9 @@
 #
 
 class User < ApplicationRecord
+  has_many addresses
+  validates :name, presence: true,length: { minimum: 5 }
+  validates :password, presence: true,length: { minimum: 6 }
+  validates :address, presence: true
+
 end
